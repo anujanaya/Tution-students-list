@@ -19,7 +19,7 @@ function App() {
   }
   const submitbtn = () => {
     
-  if(name===emailid===number){
+  if(name!== "" && emailid!== "" && number!==""){
     console.log({ name }, { emailid }, { number })
 }else {
   alert("Please fill in all the fields.");
