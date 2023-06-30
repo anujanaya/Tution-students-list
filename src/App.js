@@ -5,7 +5,8 @@ function App() {
 
   const [name, setName] = useState(" ");
 
-  const onChangeName = () => {
+  const onChangeName = (e) => {
+    console.log(e);
     };
     
   return (
