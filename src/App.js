@@ -7,7 +7,7 @@ function App() {
   const [emailid, setEmailid] = useState("");
   const [number, setNumber] = useState("");
   const [gender, setGender] = useState("");
-
+  const [feedback, setFeedback] = useState("");
 
   const onChangeName = (e) => {
     setName(e.target.value)
@@ -21,6 +21,9 @@ function App() {
   };
   const onChangeGender = (e) => {
     setGender(e.target.value)
+  };
+  const onChangeFeedback = (e) => {
+    setFeedback(e.target.value)
   };
   const submitbtn = () => {
     if (name !== "" && emailid !== "" && number !== "" && gender !== "") {
@@ -59,6 +62,9 @@ function App() {
         <option value="Female">Female</option>
         <option value="Other">Other</option>
       </select>
+      <h3>Feedback</h3>
+
+      <input style={{ height: "50px" }} text placeholder="Feedback" value={feedback} onChange={(e) => { onChangeFeedback(e) }}></input>
       <div>
         <button onClick={submitbtn}>Submit</button>
       </div>
