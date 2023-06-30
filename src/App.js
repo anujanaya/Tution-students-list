@@ -3,18 +3,17 @@ import './App.css';
 
 function App() {
 
-  const [name, setName] = useState("Ashi");
+  const [name, setName] = useState(" ");
 
-  const OnChangeBtnClick = () => {
-    setName("Anuja");
-  };
-  return (
+return (
     <div>
-      <div className="Heading">
-        Student List
+      <div>
+        Name
       </div>
-      <div>{name}</div>
-      <button onClick={OnChangeBtnClick}>Change Name</button>
+      <input text placeholder="Enter Name"></input>
+      <div>
+      <button>Submit</button>
+      </div>
     </div>
   );
 }
