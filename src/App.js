@@ -6,7 +6,7 @@ function App() {
   const [name, setName] = useState("");
   const [emailid, setEmailid] = useState("");
   const [number, setNumber] = useState("");
- const[gender, setGender] = useState("");
+  const [gender, setGender] = useState("");
 
   const onChangeName = (e) => {
     setName(e.target.value)
@@ -18,23 +18,24 @@ function App() {
   const onChangeNumber = (e) => {
     setNumber(e.target.value)
   };
-  const onChangeGender = (e) =>{
+  const onChangeGender = (e) => {
     setGender(e.target.value)
   };
   const submitbtn = () => {
     if (name !== "" && emailid !== "" && number !== "" && gender !== "") {
       console.log({ name }, { emailid }, { number }, { gender });
-  } else{
-  if(name=== "" ){
-    alert("Please fill the name.");
-  }else if(emailid=== ""){
-  alert("Please fill the email.");
-}else if(number===""){
-  alert("Please fill the number");
-}else if(gender===""){
-  alert("Please select the gender");
-}
-}};
+    } else {
+      if (name === "") {
+        alert("Please fill the name.");
+      } else if (emailid === "") {
+        alert("Please fill the email.");
+      } else if (number === "") {
+        alert("Please fill the number");
+      } else if (gender === "") {
+        alert("Please select the gender");
+      }
+    } alert("Welcome Ashi" + " " + name)
+  };
   return (
     <div>
       <h3> Name</h3>
