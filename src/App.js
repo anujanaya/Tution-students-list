@@ -5,12 +5,14 @@ function App() {
 
   const [name, setName] = useState(" ");
 
-return (
+  const OnChangeBtnClick = () => {
+    };
+  return (
     <div>
       <div>
         Name
       </div>
-      <input text placeholder="Enter Name"></input>
+      <input text placeholder="Enter Name" value={name} onChange={(e)=>{setName(e.target.value)}}></input>
       <div>
       <button>Submit</button>
       </div>
