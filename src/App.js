@@ -24,7 +24,7 @@ function App() {
   const submitbtn = () => {
     if (name !== "" && emailid !== "" && number !== "" && gender !== "") {
       console.log({ name }, { emailid }, { number }, { gender });
-      alert("Welcome Ashi" + " " + name)
+      alert("Welcome" + " " + name)
     } else {
       if (name === "") {
         alert("Please fill the name.");
