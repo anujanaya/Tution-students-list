@@ -3,13 +3,13 @@ import './App.css';
 
 function App() {
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Ashi");
   return (
     <div>
       <div className="Heading">
-        Student List
+        Student List{setName}
       </div>
-      <div>Ashi</div>
+      <div>{name}</div>
     </div>
   );
 }
