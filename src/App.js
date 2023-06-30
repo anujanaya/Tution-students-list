@@ -22,11 +22,18 @@ function App() {
     setGender(e.target.value)
   };
   const submitbtn = () => {
-    
-  if(name!== "" && emailid!== "" && number!=="" && gender!=="" ){
-    console.log({ name }, { emailid }, { number })
-}else {
-  alert("Please fill in all the fields.");
+    if (name !== "" && emailid !== "" && number !== "" && gender !== "") {
+      console.log({ name }, { emailid }, { number }, { gender });
+  } else{
+  if(name=== "" ){
+    alert("Please fill the name.");
+  }else if(emailid=== ""){
+  alert("Please fill the email.");
+}else if(number===""){
+  alert("Please fill the number");
+}else if(gender===""){
+  alert("Please select the gender");
+}
 }};
   return (
     <div>
