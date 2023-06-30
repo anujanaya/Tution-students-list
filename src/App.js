@@ -6,6 +6,7 @@ function App() {
   const [name, setName] = useState("");
   const [emailid, setEmailid] = useState("");
   const [number, setNumber] = useState("");
+  
   const onChangeName = (e) => {
     setName(e.target.value)
     console.log(e.target.value);
@@ -22,11 +23,11 @@ function App() {
 
   return (
     <div>
-      <div>
-        Name
-      </div>
+      <h3> Name</h3>
       <input text placeholder="Enter Name" value={name} onChange={(e) => { onChangeName(e) }}></input>
+      <h3>Email Id</h3>
       <input text placeholder="Email Id" value={emailid} onchange={(e) => { onChangeEmail(e) }}></input>
+      <h3>Contact Number</h3>
       <input text placeholder="Contact Number" value={number} onchange={(e) => { onChangeNumber(e) }}></input>
       <div>
         <button onClick={submitbtn}>Submit</button>
