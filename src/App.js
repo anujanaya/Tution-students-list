@@ -8,6 +8,7 @@ function App() {
   const [number, setNumber] = useState("");
   const [gender, setGender] = useState("");
 
+
   const onChangeName = (e) => {
     setName(e.target.value)
     console.log(e.target.value);
@@ -38,7 +39,10 @@ function App() {
     }
   };
   const clearbtn = () => {
-
+    setName("");
+    setEmailid("");
+    setGender("");
+    setNumber("");
   }
   return (
     <div>
