@@ -18,18 +18,22 @@ function App() {
     setNumber(e.target.value)
   }
   const submitbtn = () => {
-    alert("Hello")
-    console.log({name}, {emailid}, {number})
+    
+  if(name&&emailid&&number){
+    console.log({ name }, { emailid }, { number })
+}else {
+  alert("Please fill in all the fields.");
+}
   };
-
-  return (
+  
+return (
     <div>
       <h3> Name</h3>
       <input text placeholder="Enter Name" value={name} onChange={(e) => { onChangeName(e) }}></input>
       <h3>Email Id</h3>
       <input text placeholder="Email Id" value={emailid} onChange={(e) => { onChangeEmail(e) }}></input>
       <h3>Contact Number</h3>
-      <input text placeholder="Contact Number" value={number} onChange={(e) => { onChangeNumber(e) }}></input>
+      <input number placeholder="Contact Number" value={number} onChange={(e) => { onChangeNumber(e) }}></input>
       <div>
         <button onClick={submitbtn}>Submit</button>
       </div>
