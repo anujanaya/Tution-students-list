@@ -19,14 +19,12 @@ function App() {
   }
   const submitbtn = () => {
     
-  if(name&&emailid&&number){
+  if(name===emailid===number){
     console.log({ name }, { emailid }, { number })
 }else {
   alert("Please fill in all the fields.");
-}
-  };
-  
-return (
+}};
+  return (
     <div>
       <h3> Name</h3>
       <input text placeholder="Enter Name" value={name} onChange={(e) => { onChangeName(e) }}></input>
