@@ -37,6 +37,9 @@ function App() {
       }
     }
   };
+  const clearbtn = () => {
+
+  }
   return (
     <div>
       <h3> Name</h3>
@@ -54,6 +57,9 @@ function App() {
       </select>
       <div>
         <button onClick={submitbtn}>Submit</button>
+      </div>
+      <div>
+        <button onClick={clearbtn}>Clear</button>
       </div>
     </div>
   );
