@@ -26,9 +26,12 @@ function App() {
   const onChangeFeedback = (e) => {
     setFeedback(e.target.value)
   };
+  const onChangeDate = (e) => {
+    setDate(e.target.value)
+  };
   const submitbtn = () => {
-    if (name !== "" && emailid !== "" && number !== "" && gender !== "" && feedback !== "") {
-      console.log({ name }, { emailid }, { number }, { gender }, { feedback });
+    if (name !== "" && emailid !== "" && number !== "" && gender !== "" && feedback !== "" && date !== "") {
+      console.log({ name }, { emailid }, { number }, { gender }, { feedback },{date});
       alert("Thanks for your Feedback")
       clearbtn();
       } else {
@@ -42,6 +45,8 @@ function App() {
         alert("Please select the gender");
       } else if (feedback === "") {
         alert("Please fill the feedback");
+      } else if (date === ""){
+        alert("Please fill the date");
       }
     }
   };
@@ -51,9 +56,12 @@ function App() {
     setGender("");
     setNumber("");
     setFeedback("");
+    setDate("");
   }
   return (
     <div>
+      <h3>Date</h3>
+      <input type = "date" value={date} onChange={onChangeDate}></input>
       <h3> Name</h3>
       <input text placeholder="Enter Name" value={name} onChange={(e) => { onChangeName(e) }}></input>
       <h3>Email Id</h3>
