@@ -30,12 +30,8 @@ function App() {
     if (name !== "" && emailid !== "" && number !== "" && gender !== "" && feedback !== "") {
       console.log({ name }, { emailid }, { number }, { gender }, { feedback });
       alert("Thanks for your Feedback")
-      setName("");
-      setEmailid("");
-      setGender("");
-      setNumber("");
-      setFeedback("");
-    } else {
+      clearbtn();
+      } else {
       if (name === "") {
         alert("Please fill the name.");
       } else if (emailid === "") {
