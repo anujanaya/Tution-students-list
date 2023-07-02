@@ -64,7 +64,7 @@ function App() {
       </select>
       <h3>Feedback</h3>
 
-      <input style={{ height: "50px" }} text placeholder="Feedback" value={feedback} onChange={(e) => { onChangeFeedback(e) }}></input>
+      <textarea rows="4" cols="50" text placeholder="Feedback" value={feedback} onChange={(e) => { onChangeFeedback(e) }}></textarea>
       <div>
         <button onClick={submitbtn}>Submit</button>
       </div>
