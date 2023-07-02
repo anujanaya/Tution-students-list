@@ -12,8 +12,7 @@ function App() {
 
   const onChangeName = (e) => {
     setName(e.target.value)
-    console.log(e.target.value);
-  };
+    };
   const onChangeEmail = (e) => {
     setEmailid(e.target.value)
   };
@@ -27,6 +26,7 @@ function App() {
     setFeedback(e.target.value)
   };
   const onChangeDate = (e) => {
+    console.log(e.target.value);
     setDate(e.target.value)
   };
   const submitbtn = () => {
