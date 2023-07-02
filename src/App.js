@@ -10,54 +10,6 @@ function App() {
   const [feedback, setFeedback] = useState("");
   const [date, setDate] = useState("");
 
-  const onChangeName = (e) => {
-    setName(e.target.value)
-    };
-  const onChangeEmail = (e) => {
-    setEmailid(e.target.value)
-  };
-  const onChangeNumber = (e) => {
-    setNumber(e.target.value)
-  };
-  const onChangeGender = (e) => {
-    setGender(e.target.value)
-  };
-  const onChangeFeedback = (e) => {
-    setFeedback(e.target.value)
-  };
-  const onChangeDate = (e) => {
-    console.log(e.target.value);
-    setDate(e.target.value)
-  };
-  const submitbtn = () => {
-    if (name !== "" && emailid !== "" && number !== "" && gender !== "" && feedback !== "" && date !== "") {
-      console.log({ name }, { emailid }, { number }, { gender }, { feedback },{date});
-      alert("Thanks for your Feedback")
-      clearbtn();
-      } else {
-      if (name === "") {
-        alert("Please fill the name.");
-      } else if (emailid === "") {
-        alert("Please fill the email.");
-      } else if (number === "") {
-        alert("Please fill the number");
-      } else if (gender === "") {
-        alert("Please select the gender");
-      } else if (feedback === "") {
-        alert("Please fill the feedback");
-      } else if (date === ""){
-        alert("Please fill the date");
-      }
-    }
-  };
-  const clearbtn = () => {
-    setName("");
-    setEmailid("");
-    setGender("");
-    setNumber("");
-    setFeedback("");
-    setDate("");
-  }
   return (
     <div>
       <h3>Date</h3>
