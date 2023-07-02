@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, axios, useEffect } from "react";
 import './App.css';
-import axios from 'axios';
+
 function App() {
 
   const [name, setName] = useState("");
@@ -9,16 +9,19 @@ function App() {
   const [gender, setGender] = useState("");
   const [feedback, setFeedback] = useState("");
   const [date, setDate] = useState("");
-  const url = 'https://jsonplaceholder.typicode.com/todos';
-  axios.get(url)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
 
+  const url = 'https://jsonplaceholder.typicode.com/todos';
+  
+  useEffect(() => {
+    axios.get(url)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+  });
   return (
     <div>
       <h3>Date</h3>
