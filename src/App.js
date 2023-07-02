@@ -4,8 +4,8 @@ import axios from 'axios'
 function App() {
 const url = 'https://jsonplaceholder.typicode.com/todos';
 
-  useEffect(() => {
-    axios.get(url)
+const getAxiosData = () =>{
+  axios.get(url)
       .then(function (response) {
         console.log(response.data);
       })
@@ -13,7 +13,11 @@ const url = 'https://jsonplaceholder.typicode.com/todos';
         // handle error
         console.log(error);
       })
+}
+useEffect(() => {
+   getAxiosData(); 
   },[]);
+
   return (
 <div>
   <h1>Axios Heading</h1>
