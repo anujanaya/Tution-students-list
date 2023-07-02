@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
-
+import axios from 'axios';
 function App() {
 
   const [name, setName] = useState("");
@@ -9,11 +9,20 @@ function App() {
   const [gender, setGender] = useState("");
   const [feedback, setFeedback] = useState("");
   const [date, setDate] = useState("");
+  const url = 'https://jsonplaceholder.typicode.com/todos';
+  axios.get(url)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
 
   return (
     <div>
       <h3>Date</h3>
-      <input type = "date" value={date} onChange={onChangeDate}></input>
+      <input type="date" value={date} onChange={onChangeDate}></input>
       <h3> Name</h3>
       <input text placeholder="Enter Name" value={name} onChange={(e) => { onChangeName(e) }}></input>
       <h3>Email Id</h3>
