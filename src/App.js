@@ -8,6 +8,7 @@ function App() {
   const [number, setNumber] = useState("");
   const [gender, setGender] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [date, setDate] = useState("");
 
   const onChangeName = (e) => {
     setName(e.target.value)
@@ -26,9 +27,9 @@ function App() {
     setFeedback(e.target.value)
   };
   const submitbtn = () => {
-    if (name !== "" && emailid !== "" && number !== "" && gender !== "") {
-      console.log({ name }, { emailid }, { number }, { gender });
-      alert("Welcome" + " " + name)
+    if (name !== "" && emailid !== "" && number !== "" && gender !== "" && feedback !== "") {
+      console.log({ name }, { emailid }, { number }, { gender }, { feedback });
+      alert("Thanks for your Feedback")
     } else {
       if (name === "") {
         alert("Please fill the name.");
@@ -38,6 +39,8 @@ function App() {
         alert("Please fill the number");
       } else if (gender === "") {
         alert("Please select the gender");
+      } else if (feedback === "") {
+        alert("Please fill the feedback");
       }
     }
   };
@@ -46,6 +49,7 @@ function App() {
     setEmailid("");
     setGender("");
     setNumber("");
+    setFeedback("");
   }
   return (
     <div>
