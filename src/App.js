@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './App.css';
 
 function App() {
@@ -26,6 +26,31 @@ function App() {
           <td>Subham</td>
           <td>25</td>
           <td>Male</td>
+        </tr>
+        <tr>
+          <td>Anuja</td>
+          <td>26</td>
+          <td>female</td>
+        </tr>
+        <tr>
+          <td>Steven</td>
+          <td>30</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Khushi</td>
+          <td>20</td>
+          <td>Female</td>
+        </tr>
+        <tr>
+          <td>Amit</td>
+          <td>32</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Sai Pallavi</td>
+          <td>30</td>
+          <td>Female</td>
         </tr>
       </table>
     </div>
