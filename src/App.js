@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <h1>My Table</h1>
+      <h1>Table List</h1>
       <table>
         <tr>
           <th>Name</th>
