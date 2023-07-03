@@ -1,58 +1,32 @@
 import React from "react";
 import './App.css';
 
+const data = [
+  { name: "Anom", age: 19, gender: "Male" },
+  { name: "Megha", age: 19, gender: "Female" },
+  { name: "Subham", age: 25, gender: "Male" },
+]
 function App() {
-
   return (
-    <div>
-      <h1>Axios Heading</h1>
+    <div className="App" >
       <table>
         <tr>
           <th>Name</th>
           <th>Age</th>
           <th>Gender</th>
         </tr>
-        <tr>
-          <td>Anom</td>
-          <td>19</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Megha</td>
-          <td>19</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Subham</td>
-          <td>25</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Anuja</td>
-          <td>26</td>
-          <td>female</td>
-        </tr>
-        <tr>
-          <td>Steven</td>
-          <td>30</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Khushi</td>
-          <td>20</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Amit</td>
-          <td>32</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Sai Pallavi</td>
-          <td>30</td>
-          <td>Female</td>
-        </tr>
+        {data.map((val, key) => {
+          return (
+            <tr key={key}>
+              <td>{val.name}</td>
+              <td>{val.age}</td>
+              <td>{val.gender}</td>
+            </tr>
+          )
+        })}
       </table>
+
+
     </div>
   );
 }
