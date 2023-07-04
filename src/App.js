@@ -7,25 +7,25 @@ function App() {
     { name: "Subham", age: 25, gender: "Male", email: "subham@gmail.com" },
     { name: "Subhajit", age: 50, gender: "Male", email: "subhajit@gmail.com" },
     { name: "Subham", age: 15, gender: "Male", email: "subham@gmail.com" },
-]
-  const girls =[
     { name: "Megha", age: 19, gender: "Female", email: "megha@gmail.com" },
     { name: "Anuja", age: 39, gender: "Female", email: "anuja@gmail.com" },
     { name: "Meghna", age: 49, gender: "Female", email: "meghna@gmail.com" },
     { name: "Megha", age: 64, gender: "Female", email: "megha@gmail.com" },
   ]
+  const boysData = data.filter((item) => item.gender === "Male")
+  const girlsData = data.filter((item) => item.gender === "Female")
   return (
     <div className="App" >
-      
+
       <table>
-      <h1>Boys Name List</h1>
+        <h1>Boys Name List</h1>
         <tr>
           <th>Name</th>
           <th>Age</th>
           <th>Gender</th>
           <th>Email</th>
         </tr>
-        {data.map((val, key) => {
+        {boysData.map((val, key) => {
           return (
             <tr key={key}>
               <td>{val.name}</td>
@@ -36,7 +36,7 @@ function App() {
           )
         })}
         <h2>Girls Name List</h2>
-         {girls.map((val, key) => {
+        {girlsData.map((val, key) => {
           return (
             <tr key={key}>
               <td>{val.name}</td>
