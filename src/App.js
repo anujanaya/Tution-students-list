@@ -3,20 +3,33 @@ import './App.css';
 import { data } from './constant.js';
 
 function App() {
-const[selectGender, setselectGender] = useState("");
+  const [selectGender, setselectGender] = useState("");
+  const [tableData, setTableData] = useState([]);
 
-const onChangeGender = (e)=>{
-  setselectGender(e.target.value);
-}
+  const onChangeGender = (e) => {
+    setselectGender(e.target.value);
+    if (e.target.value === "All") {
+      setTableData(data);
+      return;
+    }
+    const boysData = data.filter((item) => item.gender === e.target.value);
+    setTableData(boysData);
+  };
+
   return (
     <div className="App" >
+      <h1>Select Students</h1>
       <table>
-        <h1>Students List</h1>
+        <select value={selectGender} onChange={onChangeGender}>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="All">All</option>
+        </select>
         <tr>
           <th>Name</th>
-
         </tr>
-        {data.map((val, key) => {
+        {tableData.map((val, key) => {
           return (
             <tr key={key}>
               <td>{val.name}</td>
