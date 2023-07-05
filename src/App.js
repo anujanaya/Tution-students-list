@@ -18,15 +18,15 @@ function App() {
 
   return (
     <div >
-      <h1>Select Students</h1>
-
+<h1>Select Students</h1>
       <select value={selectGender} onChange={onChangeGender}>
         <option value="">Select Gender</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="All">All</option>
       </select>
-      <div className="App" >
+
+    <div className="App" >
         <table>
           <tr>
             <th>Name</th>

@@ -4,12 +4,13 @@
   /* display: flex;
   justify-content: center; */
   align-items: left-corner;
+  margin-top: 10px;
 }
 
 table {
   border: 2px solid forestgreen;
-  width: 400px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
 }
 
 th {
