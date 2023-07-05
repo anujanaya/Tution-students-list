@@ -18,7 +18,16 @@ function App() {
 
   return (
     <div >
-<h1>Select Students</h1>
+<h1>Add Student</h1>
+<h3>Name</h3>
+<input type="text" placeholder="Enter Name"></input>
+<h3>Father Name</h3>
+<input type="text" placeholder="Enter Name"></input>
+<h3>Email Id</h3>
+<input type="text" placeholder="Email Id"></input>
+<h3>Contact Number</h3>
+<input type="text" placeholder="Contact Number"></input>
+<h3>Gender</h3>
       <select value={selectGender} onChange={onChangeGender}>
         <option value="">Select Gender</option>
         <option value="Male">Male</option>
@@ -26,21 +35,15 @@ function App() {
         <option value="All">All</option>
       </select>
 
-    <div className="App" >
-        <table>
-          <tr>
-            <th>Name</th>
-          </tr>
-          {tableData.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td>{val.name}</td>
-              </tr>
-            )
-          })}
-        </table>
+      <h3>School Name</h3>
+<input type="text" placeholder="School Name"></input> 
+{/* <h3>Joining Date</h3>
+<Date></Date> */}
+<h3>Address</h3>
+<input type="text" placeholder="Address"></input>
+
       </div>
-    </div>
+    
   );
 }
 export default App;
