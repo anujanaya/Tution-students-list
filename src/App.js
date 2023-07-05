@@ -3,7 +3,11 @@ import './App.css';
 import { data } from './constant.js';
 
 function App() {
+const[selectGender, setselectGender] = useState("");
 
+const onChangeGender = (e)=>{
+  setselectGender(e.target.value);
+}
   return (
     <div className="App" >
       <table>
