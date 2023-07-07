@@ -11,7 +11,6 @@ function App() {
   const [selectGender, setselectGender] = useState("");
   const [joiningDate, setjoiningDate] = useState("");
   const [address, setAddress] = useState("");
-  const [feedback, setFeedback] = useState([]);
   const [tableData, setTableData] = useState("")
 
   const onChangeName = (e) => {
@@ -44,12 +43,9 @@ function App() {
   const onChangeAddress = (e) => {
     setAddress(e.target.value)
   }
-  const onChangeFeedback = (e) => {
-    setFeedback(e.target.value)
-  }
   const submitbtn = () => {
-    if (name !== "" && fatherName !== "" && emailId !== "" && contact !== "" && schoolName !== "" && selectGender !== "" && feedback !== "" && joiningDate !== "" && address !== "") {
-      console.log({ name }, { emailId }, { contact }, { schoolName }, { address }, { selectGender }, { feedback }, { joiningDate });
+    if (name !== "" && fatherName !== "" && emailId !== "" && contact !== "" && schoolName !== "" && selectGender !== ""  && joiningDate !== "" && address !== "") {
+      console.log({ name }, { emailId }, { contact }, { schoolName }, { address }, { selectGender }, { joiningDate });
       alert("Student Added Successfully")
       clearbtn();
     } else {
@@ -59,26 +55,26 @@ function App() {
         alert("Please Fill the Father's Name")
       } else if (emailId === "") {
         alert("Please fill the email.");
+      } else if (schoolName === "") {
+        alert("Please Fill the School Name")
       } else if (contact === "") {
         alert("Please fill the number");
       } else if (selectGender === "") {
         alert("Please select the gender");
       } else if (address === "") {
         alert("Please fill the address");
-      } else if (feedback === "") {
-        alert("Please fill the feedback");
-      } else if (joiningDate === "") {
+      }  else if (joiningDate === "") {
         alert("Please fill the date");
       }
     }
   };
   const clearbtn = () => {
     setName("");
+    setfatherName("");
     setEmailId("");
     setselectGender("");
     setContact("");
     setAddress("");
-    setFeedback("");
     setjoiningDate("");
   }
 
@@ -106,9 +102,7 @@ function App() {
       <h3>Joining Date</h3>
       <input type="Date" value={joiningDate} onChange={(e) => { onChangeDatejoining(e) }}></input>
       <h3>Address</h3>
-      <input type="text" placeholder="Address" value={address} onChange={(e) => { onChangeAddress(e) }}></input>
-      <h3>Feedback</h3>
-      <textarea rows="4" cols="50" text placeholder="Feedback" value={feedback} onChange={(e) => { onChangeFeedback(e) }}></textarea>
+      <textarea rows="4" cols="50" text placeholder="Address" value={address} onChange={(e) => { onChangeAddress(e) }}></textarea>
       <div>
         <button onClick={submitbtn}>Add Student</button>
       </div>
